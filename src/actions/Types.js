@@ -1,5 +1,2 @@
-export const EMAIL_CHANGED = 'email_changed';
-export const PASSWORD_CHANGED = 'password_changed';
-export const LOGIN_USER_SUCCESS = 'login_user_success';
-export const LOGIN_USER_FAIL = 'login_user_fail';
-export const LOGIN_USER = 'login_user';
+export const RETRIEVE_WEATHER_DETAILS = 'retrieve_weather_details';
+export const RETRIEVE_WEATHER_DETAILS_SUCCESS = 'weather_detail_retrieval_success';

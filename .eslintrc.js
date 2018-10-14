@@ -1,4 +1,4 @@
 module.exports = {
-    "extends": ["eslint:recommended", "google"],
+    "extends": ["airbnb"],
     "parser": "babel-eslint"
 };

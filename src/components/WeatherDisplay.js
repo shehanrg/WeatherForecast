@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { FlatList } from 'react-native';
+import { FlatList, View } from 'react-native';
 import { retrieveWeatherDetails } from '../actions';
 import { Spinner } from './common';
 import ListItem from './ListItem';
@@ -11,18 +11,26 @@ class WeatherDisplay extends Component {
   };
 
   renderItem(weatherItem) {
-      return (<ListItem weatherItem={weatherItem} />);
+    return <ListItem weatherItem={weatherItem} />;
   }
 
   render() {
-      console.log(this.props.weatherDetails);
+    console.log(this.props.weatherDetails);
     const { weatherDetails } = this.props;
     return (
-      <FlatList
-        data={weatherDetails}
-        renderItem={this.renderItem}
-        keyExtractor={(item, index) => item.key}
-      />
+      <View style={{
+        flex: 1, 
+        alignContent: 'center', 
+        justifyContent: 'center', 
+        marginTop: 50,
+      }}
+      >
+        <FlatList
+          data={weatherDetails}
+          renderItem={this.renderItem}
+          keyExtractor={(item, index) => item.key}
+        />
+      </View>
     );
   }
 }
